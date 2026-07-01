@@ -270,7 +270,7 @@ void *handle_req(void *arg)
     pthread_exit(NULL);
 }
 
-void *listen_client()
+void *listen_client(void *arg)
 {
     // SStoNM *info_ss = (SStoNM *)args;
     int server_fd, *new_socket;
@@ -845,14 +845,14 @@ int main(int argc, char *argv[])
         exit(EXIT_FAILURE);
     }
 
+    char *storage_ip = argv[1];
+    int port_nm = NAMING_SERVER_PORT;
+    int port_client = CLIENT_PORT;
+
     if (connect_to_naming_server_async() == -1)
     {
         printf(RED "Error connecting for asycn with naming\n");
     }
-
-    char *storage_ip = argv[1];
-    int port_nm = NAMING_SERVER_PORT;
-    int port_client = CLIENT_PORT;
 
     SStoNM *info_ss;
     info_ss = (SStoNM *)malloc(sizeof(SStoNM));

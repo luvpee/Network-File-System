@@ -37,7 +37,7 @@
 
 #define NAMING_SERVER_PORT 8080      // Port for Naming Server connection (change as needed)
 #define TEMP_NS_PORT 8082
-#define NAMING_SERVER_IP "10.42.0.1" // Naming Server IP (change as needed)
+#define NAMING_SERVER_IP "127.0.0.1" // Naming Server IP (change as needed)
 #define CLIENT_PORT 2000
 
 #define MAX_PATHS 100    // Max number of paths we can store in the array

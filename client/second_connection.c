@@ -15,7 +15,7 @@
 // } t_request;
 // #pragma pack(pop)
 
-void *receiver()
+void *receiver(void *arg)
 {
     int server_fd, new_socket;
     struct sockaddr_in address;

@@ -17,7 +17,7 @@
 // Constants for network communication
 #define NS_PORT 8081        // Port for Naming Server
 #define TEMP_RECEIVER_PORT 8083
-#define NS_IP "10.42.0.1"   // IP address of the naming server
+#define NS_IP "127.0.0.1"   // IP address of the naming server
 #define SS_PORT 8000        // Port for Storage Server
 #define MAX_BUFFER 1024     // Maximum buffer size
 #define MAX_PATH 512       // Maximum path length
@@ -74,5 +74,5 @@ void copy_operation(int ns_socket, char *source, char *dest);
 void info_operation(int ns_socket, char *path);
 void stream_operation(int ns_socket,char *path);
 void clear_socket_buffer(int socket_fd);
-void *receiver();
+void *receiver(void *arg);
 #endif // HEADERS_H
